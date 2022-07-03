@@ -1,0 +1,22 @@
+{
+    "name": "root22/freetube",
+    "license": "propriatory",
+    "authors": [
+        {
+            "name": "brit45",
+            "email": "36789485+brit45@users.noreply.github.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "APP\\" : "App/",
+            "TESTS\\" : "Test/"
+        }
+    },
+   "scripts" : {
+	"run:server" : "php -S localhost:8000 -t Public"
+   },
+    "require-dev": {
+        "larapack/dd": "^1.1"
+    }
+}
