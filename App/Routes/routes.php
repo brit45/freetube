@@ -14,14 +14,22 @@ class routes {
 
         $this->router = $router;
     }
-
+    
+    /**
+     * Handle
+     * 
+     * Listening routage on site.
+     *
+     * @return void
+     */
     public function Handle() {
         
-        $this->router->setRoute('index',new IndexController($this->router),'Index',null);
-        $this->router->setRoute('*',new IndexController($this->router),'Home',null);
+        $this->router->Root(IndexController::class,'Home',null);
 
-        $this->router->setRoute("home",new IndexController($this->router),'Home',['AllPermission', 'AdminAccess']);
+        $this->router->setRoute('index',IndexController::class,'Index',null);
+
+        $this->router->setRoute("home",IndexController::class,'Home',['AllPermission', 'AdminAccess']);
         
-        $this->router->setRoute("login",new LoginController($this->router),'Home',['AllPermission', 'SecurrityConnected']);
+        $this->router->setRoute("connect",LoginController::class,'Home',['AllPermission', 'SecurrityConnected']);
     }
 }

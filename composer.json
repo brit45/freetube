@@ -17,6 +17,7 @@
 	"run:server" : "php -S localhost:8000 -t Public"
    },
     "require-dev": {
-        "larapack/dd": "^1.1"
+        "larapack/dd": "^1.1",
+        "phpunit/phpunit": "^9.5"
     }
 }
