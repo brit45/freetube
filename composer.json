@@ -10,11 +10,12 @@
     "autoload": {
         "psr-4": {
             "APP\\" : "App/",
-            "TESTS\\" : "Test/"
+            "TEST\\" : "Test/"
         }
     },
    "scripts" : {
-	"run:server" : "php -S localhost:8000 -t Public"
+	"run:server" : "php -S localhost:8000 -t Public",
+    "run:test" : "./vendor/bin/phpunit Test --color"
    },
     "require-dev": {
         "larapack/dd": "^1.1",
